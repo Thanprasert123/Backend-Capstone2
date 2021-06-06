@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Company$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Company$">
+          <Property Name="CompanyID" Type="float" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="Companyname" Type="nvarchar" MaxLength="255" />
+          <Property Name="shipping Address" Type="float" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Driver$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Driver$">
+          <Property Name="DriverID" Type="float" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+          <Property Name="TruckID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="F6" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Manager$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Manager$">
+          <Property Name="ManagerID" Type="float" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Order$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Order$">
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="shipping Address" Type="float" />
+          <Property Name="ShippingID" Type="float" />
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Reciept$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Reciept$">
+          <Property Name="RecieteNumber" Type="float" />
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShippingID" Type="float" />
+          <Property Name="OrderID" Type="float" />
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="TaxNumber" Type="float" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.'Sale Office$'' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="'Sale Office$'">
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="TIME_IN" Type="nvarchar" MaxLength="255" />
+          <Property Name="TIME_OUT" Type="nvarchar" MaxLength="255" />
+          <Property Name="TOTAL_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderID" Type="float" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Truck$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Truck$">
+          <Property Name="TruckID" Type="float" />
+          <Property Name="DriverID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" />
+    <Property Name="password" Type="nvarchar(max)" />
+    <Property Name="position" Type="nvarchar(max)" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.User$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="User$">
+          <Property Name="UserID" Type="int" />
+          <Property Name="UserName By Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Password" Type="nvarchar" MaxLength="255" />
+          <Property Name="NameUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="phoneNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="Age" Type="float" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityContainer Name="DatabaseContextStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

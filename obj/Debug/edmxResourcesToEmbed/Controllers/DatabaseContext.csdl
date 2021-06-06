@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Capstone2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company_">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="Double" Nullable="false" />
+    <Property Name="UserID" Type="Double" />
+    <Property Name="Companyname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="shipping_Address" Type="Double" />
+  </EntityType>
+  <EntityType Name="Driver_">
+    <Key>
+      <PropertyRef Name="DriverID" />
+    </Key>
+    <Property Name="DriverID" Type="Double" Nullable="false" />
+    <Property Name="UserID" Type="Double" />
+    <Property Name="DriverName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TruckID" Type="Double" />
+    <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Manager_">
+    <Key>
+      <PropertyRef Name="ManagerID" />
+    </Key>
+    <Property Name="ManagerID" Type="Double" Nullable="false" />
+    <Property Name="UserID" Type="Double" />
+    <Property Name="ManagerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Order_">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PaymentNO" Type="Double" />
+    <Property Name="OrderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="Price" Type="Double" />
+    <Property Name="Amount" Type="Double" />
+    <Property Name="shipping_Address" Type="Double" />
+    <Property Name="ShippingID" Type="Double" />
+    <Property Name="PONumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="OrderID" Type="Double" />
+    <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="C_Sale_Office__">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TIME_IN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TIME_OUT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TOTAL_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Precision="3" />
+    <Property Name="OrderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OrderID" Type="Double" />
+  </EntityType>
+  <EntityType Name="Sheet1_">
+    <Key>
+      <PropertyRef Name="InvoiceNumber" />
+    </Key>
+    <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PaymentNO" Type="Double" />
+    <Property Name="DATE" Type="DateTime" Precision="3" />
+    <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="O_ty" Type="Double" />
+    <Property Name="AMOUNT" Type="Double" />
+    <Property Name="Price_Liter" Type="Double" />
+    <Property Name="shipping_Address" Type="Double" />
+    <Property Name="CustomerID" Type="Double" />
+    <Property Name="Customername" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TaxNumber" Type="Double" />
+    <Property Name="InvoiceNumber" Type="Double" Nullable="false" />
+    <Property Name="Filling_Time" Type="Double" />
+    <Property Name="Vat_7___inclusive_" Type="Double" />
+    <Property Name="Grand_Total" Type="Double" />
+    <Property Name="Company_Name_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Address_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Truck_">
+    <Key>
+      <PropertyRef Name="TruckID" />
+    </Key>
+    <Property Name="TruckID" Type="Double" Nullable="false" />
+    <Property Name="DriverID" Type="Double" />
+    <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DriverName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User_">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Double" Nullable="false" />
+    <Property Name="UserName_By_Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NameUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Double" />
+    <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Capstone2Entities16" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Company_" EntityType="Self.Company_" />
+    <EntitySet Name="Driver_" EntityType="Self.Driver_" />
+    <EntitySet Name="Manager_" EntityType="Self.Manager_" />
+    <EntitySet Name="Order_" EntityType="Self.Order_" />
+    <EntitySet Name="C_Sale_Office__" EntityType="Self.C_Sale_Office__" />
+    <EntitySet Name="Sheet1_" EntityType="Self.Sheet1_" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Truck_" EntityType="Self.Truck_" />
+    <EntitySet Name="User_" EntityType="Self.User_" />
+  </EntityContainer>
+</Schema>

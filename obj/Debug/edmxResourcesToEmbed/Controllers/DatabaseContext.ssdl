@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Capstone2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company$">
+    <Key>
+      <PropertyRef Name="CompanyID" />
+    </Key>
+    <Property Name="CompanyID" Type="float" Nullable="false" />
+    <Property Name="UserID" Type="float" />
+    <Property Name="Companyname" Type="nvarchar" MaxLength="255" />
+    <Property Name="shipping Address" Type="float" />
+  </EntityType>
+  <EntityType Name="Driver$">
+    <Key>
+      <PropertyRef Name="DriverID" />
+    </Key>
+    <Property Name="DriverID" Type="float" Nullable="false" />
+    <Property Name="UserID" Type="float" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+    <Property Name="TruckID" Type="float" />
+    <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+    <Property Name="F6" Type="nvarchar" MaxLength="255" />
+    <Property Name="F7" Type="nvarchar" MaxLength="255" />
+    <Property Name="F8" Type="nvarchar" MaxLength="255" />
+    <Property Name="F9" Type="nvarchar" MaxLength="255" />
+    <Property Name="F10" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Manager$">
+    <Key>
+      <PropertyRef Name="ManagerID" />
+    </Key>
+    <Property Name="ManagerID" Type="float" Nullable="false" />
+    <Property Name="UserID" Type="float" />
+    <Property Name="ManagerName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Order$">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PaymentNO" Type="float" />
+    <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="Price" Type="float" />
+    <Property Name="Amount" Type="float" />
+    <Property Name="shipping Address" Type="float" />
+    <Property Name="ShippingID" Type="float" />
+    <Property Name="PONumber" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="OrderID" Type="float" />
+    <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Reciept$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Reciept$">
+          <Property Name="RecieteNumber" Type="float" />
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShippingID" Type="float" />
+          <Property Name="OrderID" Type="float" />
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="TaxNumber" Type="float" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="'Sale Office$'">
+    <Key>
+      <PropertyRef Name="PONumber" />
+    </Key>
+    <Property Name="PONumber" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="TIME_IN" Type="nvarchar" MaxLength="255" />
+    <Property Name="TIME_OUT" Type="nvarchar" MaxLength="255" />
+    <Property Name="TOTAL_TIME" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+    <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="OrderID" Type="float" />
+  </EntityType>
+  <EntityType Name="Sheet1$">
+    <Key>
+      <PropertyRef Name="InvoiceNumber" />
+    </Key>
+    <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="PaymentNO" Type="float" />
+    <Property Name="DATE" Type="datetime" />
+    <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+    <Property Name="O'ty" Type="float" />
+    <Property Name="AMOUNT" Type="float" />
+    <Property Name="Price/Liter" Type="float" />
+    <Property Name="shipping Address" Type="float" />
+    <Property Name="CustomerID" Type="float" />
+    <Property Name="Customername" Type="nvarchar" MaxLength="255" />
+    <Property Name="TaxNumber" Type="float" />
+    <Property Name="InvoiceNumber" Type="float" Nullable="false" />
+    <Property Name="Filling Time" Type="float" />
+    <Property Name="Vat 7% (inclusive)" Type="float" />
+    <Property Name="Grand Total" Type="float" />
+    <Property Name="Company Name " Type="nvarchar" MaxLength="255" />
+    <Property Name="Address " Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Truck$">
+    <Key>
+      <PropertyRef Name="TruckID" />
+    </Key>
+    <Property Name="TruckID" Type="float" Nullable="false" />
+    <Property Name="DriverID" Type="float" />
+    <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+    <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="User$">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="float" Nullable="false" />
+    <Property Name="UserName By Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="NameUser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Position" Type="nvarchar" MaxLength="255" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+    <Property Name="phoneNumber" Type="nvarchar" MaxLength="255" />
+    <Property Name="Age" Type="float" />
+    <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="Capstone2ModelStoreContainer">
+    <EntitySet Name="Company$" EntityType="Self.Company$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Driver$" EntityType="Self.Driver$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manager$" EntityType="Self.Manager$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order$" EntityType="Self.Order$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'Sale Office$'" EntityType="Self.'Sale Office$'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sheet1$" EntityType="Self.Sheet1$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Truck$" EntityType="Self.Truck$" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User$" EntityType="Self.User$" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

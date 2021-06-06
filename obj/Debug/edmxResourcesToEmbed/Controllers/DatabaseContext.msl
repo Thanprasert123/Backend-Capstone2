@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Capstone2ModelStoreContainer" CdmEntityContainer="Capstone2Entities16">
+    <EntitySetMapping Name="Company_">
+      <EntityTypeMapping TypeName="Capstone2Model.Company_">
+        <MappingFragment StoreEntitySet="Company$">
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+          <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Driver_">
+      <EntityTypeMapping TypeName="Capstone2Model.Driver_">
+        <MappingFragment StoreEntitySet="Driver$">
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+          <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+          <ScalarProperty Name="F6" ColumnName="F6" />
+          <ScalarProperty Name="F7" ColumnName="F7" />
+          <ScalarProperty Name="F8" ColumnName="F8" />
+          <ScalarProperty Name="F9" ColumnName="F9" />
+          <ScalarProperty Name="F10" ColumnName="F10" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manager_">
+      <EntityTypeMapping TypeName="Capstone2Model.Manager_">
+        <MappingFragment StoreEntitySet="Manager$">
+          <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order_">
+      <EntityTypeMapping TypeName="Capstone2Model.Order_">
+        <MappingFragment StoreEntitySet="Order$">
+          <ScalarProperty Name="PaymentNO" ColumnName="PaymentNO" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+          <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C_Sale_Office__">
+      <EntityTypeMapping TypeName="Capstone2Model.C_Sale_Office__">
+        <MappingFragment StoreEntitySet="'Sale Office$'">
+          <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+          <ScalarProperty Name="TIME_IN" ColumnName="TIME_IN" />
+          <ScalarProperty Name="TIME_OUT" ColumnName="TIME_OUT" />
+          <ScalarProperty Name="TOTAL_TIME" ColumnName="TOTAL_TIME" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+          <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sheet1_">
+      <EntityTypeMapping TypeName="Capstone2Model.Sheet1_">
+        <MappingFragment StoreEntitySet="Sheet1$">
+          <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+          <ScalarProperty Name="PaymentNO" ColumnName="PaymentNO" />
+          <ScalarProperty Name="DATE" ColumnName="DATE" />
+          <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+          <ScalarProperty Name="O_ty" ColumnName="O'ty" />
+          <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+          <ScalarProperty Name="Price_Liter" ColumnName="Price/Liter" />
+          <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="Customername" ColumnName="Customername" />
+          <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="Filling_Time" ColumnName="Filling Time" />
+          <ScalarProperty Name="Vat_7___inclusive_" ColumnName="Vat 7% (inclusive)" />
+          <ScalarProperty Name="Grand_Total" ColumnName="Grand Total" />
+          <ScalarProperty Name="Company_Name_" ColumnName="Company Name " />
+          <ScalarProperty Name="Address_" ColumnName="Address " />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Capstone2Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Truck_">
+      <EntityTypeMapping TypeName="Capstone2Model.Truck_">
+        <MappingFragment StoreEntitySet="Truck$">
+          <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+          <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+          <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_">
+      <EntityTypeMapping TypeName="Capstone2Model.User_">
+        <MappingFragment StoreEntitySet="User$">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="UserName_By_Email" ColumnName="UserName By Email" />
+          <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

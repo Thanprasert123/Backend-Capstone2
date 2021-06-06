@@ -1,0 +1,994 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Capstone2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="'Account payable$'">
+          <Key>
+            <PropertyRef Name="Begiining stock " />
+          </Key>
+          <Property Name="SAFETY STOCK" Type="float" Nullable="false" />
+          <Property Name="Begiining stock " Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amount sold " Type="float" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="Balance before order " Type="float" />
+          <Property Name="No of time to purchase " Type="float" />
+          <Property Name="Amount purchase " Type="float" />
+          <Property Name="Balance (litre)" Type="float" />
+          <Property Name="Amount1" Type="float" />
+        </EntityType>
+        <EntityType Name="Account receiveable">
+          <Key>
+            <PropertyRef Name="Balance" />
+          </Key>
+          <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Ref" Type="nvarchar" MaxLength="255" />
+          <Property Name="Debit" Type="float" />
+          <Property Name="Credit" Type="nvarchar" MaxLength="255" />
+          <Property Name="Balance" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="'Cash $'">
+          <Key>
+            <PropertyRef Name="Balance " />
+          </Key>
+          <Property Name="DATE" Type="datetime" Nullable="false" />
+          <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Ref" Type="nvarchar" MaxLength="255" />
+          <Property Name="Debit" Type="float" />
+          <Property Name="Credit " Type="float" />
+          <Property Name="Balance " Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Company$">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="float" Nullable="false" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="Companyname" Type="nvarchar" MaxLength="255" />
+          <Property Name="shipping Address" Type="float" />
+        </EntityType>
+        <EntityType Name="'daily $'">
+          <Key>
+            <PropertyRef Name="total COGS" />
+          </Key>
+          <Property Name="Date " Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="Sale of  Gasol95" Type="float" Nullable="false" />
+          <Property Name="Sale of disel " Type="float" />
+          <Property Name="total sale " Type="float" />
+          <Property Name="gasol 95 of good sold " Type="float" Nullable="false" />
+          <Property Name="disel cost  of good sold" Type="float" />
+          <Property Name="total COGS" Type="float" Nullable="false" />
+          <Property Name="gross profit " Type="float" />
+          <Property Name="sale offcie staff salary" Type="float" />
+          <Property Name="gate controller salary" Type="float" />
+          <Property Name="utility expense " Type="float" />
+          <Property Name="depresisation " Type="float" />
+          <Property Name="net income" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="daily$">
+          <Key>
+            <PropertyRef Name="Beginning Stock(litre)" />
+          </Key>
+          <Property Name="Beginning Stock(litre)" Type="float" Nullable="false" />
+          <Property Name="F2" Type="float" />
+          <Property Name="Amount Perchased(litre)" Type="float" />
+          <Property Name="F4" Type="float" />
+          <Property Name="Amount Sold/ Day(litre)" Type="float" Nullable="false" />
+          <Property Name="F6" Type="float" />
+          <Property Name="Ending  Stock(litre)" Type="float" />
+          <Property Name="F8" Type="float" />
+        </EntityType>
+        <EntityType Name="Driver$">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="float" Nullable="false" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+          <Property Name="TruckID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="F6" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceNumber" />
+          </Key>
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="O'ty" Type="float" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="Price/Liter" Type="float" />
+          <Property Name="shipping Address" Type="float" />
+          <Property Name="CustomerID" Type="float" />
+          <Property Name="Customername" Type="nvarchar" MaxLength="255" />
+          <Property Name="TaxNumber" Type="float" />
+          <Property Name="InvoiceNumber" Type="float" Nullable="false" />
+          <Property Name="Filling Time" Type="float" />
+          <Property Name="Vat 7% (inclusive)" Type="float" />
+          <Property Name="Grand Total" Type="float" />
+          <Property Name="Company Name " Type="nvarchar" MaxLength="255" />
+          <Property Name="Address " Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Manager$">
+          <Key>
+            <PropertyRef Name="ManagerID" />
+          </Key>
+          <Property Name="ManagerID" Type="float" Nullable="false" />
+          <Property Name="UserID" Type="float" />
+          <Property Name="ManagerName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="monthly$">
+          <Key>
+            <PropertyRef Name="SALE" />
+          </Key>
+          <Property Name="SALE" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="F2" Type="nvarchar" MaxLength="255" />
+          <Property Name="F3" Type="float" />
+        </EntityType>
+        <EntityType Name="Order$">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="shipping Address" Type="float" />
+          <Property Name="ShippingID" Type="float" />
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="OrderID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Purchase order">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="O'ty" Type="float" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="Price/Liter" Type="float" />
+          <Property Name="shipping Address" Type="float" />
+          <Property Name="CompanyID" Type="float" />
+          <Property Name="Companyname" Type="nvarchar" MaxLength="255" />
+          <Property Name="TaxNumber" Type="float" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="nvarchar" MaxLength="255" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'Capstone2.dbo.Reciept$' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Reciept$">
+          <Property Name="RecieteNumber" Type="float" />
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShippingID" Type="float" />
+          <Property Name="OrderID" Type="float" />
+          <Property Name="PaymentNO" Type="float" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="TaxNumber" Type="float" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="Price" Type="float" />
+          <Property Name="Amount" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+        <EntityType Name="Reconciliation ">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="DATE" Type="datetime" Nullable="false" />
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PAYMENT_NUMBER" Type="float" />
+          <Property Name="INVOICE_NUMBER" Type="float" />
+          <Property Name="SHIPMENT_NUMBER" Type="float" />
+          <Property Name="TRUCK_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="O'ty (Liter)" Type="float" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="AGENT" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="'Sale Office$'">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PONumber" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="TIME_IN" Type="nvarchar" MaxLength="255" />
+          <Property Name="TIME_OUT" Type="nvarchar" MaxLength="255" />
+          <Property Name="TOTAL_TIME" Type="nvarchar" MaxLength="255" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="OrderName" Type="nvarchar" MaxLength="255" />
+          <Property Name="VehicleNo" Type="nvarchar" MaxLength="255" />
+          <Property Name="OrderID" Type="float" />
+        </EntityType>
+        <EntityType Name="'stock $'">
+          <Key>
+            <PropertyRef Name="Beginning Stock(Baht)" />
+          </Key>
+          <Property Name="safety" Type="float" Nullable="false" />
+          <Property Name="F2" Type="float" />
+          <Property Name="Beginning Stock(litre)" Type="float" Nullable="false" />
+          <Property Name="F4" Type="float" />
+          <Property Name="Beginning Stock(Baht)" Type="float" Nullable="false" />
+          <Property Name="F6" Type="float" />
+          <Property Name="Amount Sold/ Day(litre)" Type="float" />
+          <Property Name="F8" Type="float" />
+          <Property Name="Amount Sold/ Day(Baht)" Type="float" />
+          <Property Name="F10" Type="float" />
+          <Property Name="Balance before order" Type="float" />
+          <Property Name="F12" Type="float" />
+          <Property Name="No# of time to purchase" Type="float" />
+          <Property Name="F14" Type="float" />
+          <Property Name="Amount Perchased(litre)" Type="float" />
+          <Property Name="F16" Type="float" />
+          <Property Name="Amount Perchased(baht)" Type="float" />
+          <Property Name="F18" Type="float" />
+          <Property Name="Balance(litre)" Type="float" Nullable="false" />
+          <Property Name="F20" Type="float" />
+          <Property Name="Balance(Baht)" Type="float" Nullable="false" />
+          <Property Name="F22" Type="float" />
+          <Property Name="F23" Type="float" />
+          <Property Name="F24" Type="float" />
+          <Property Name="F25" Type="float" />
+          <Property Name="F26" Type="float" />
+        </EntityType>
+        <EntityType Name="'stock disel$'">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="SAFETY STOCK" Type="float" Nullable="false" />
+          <Property Name="Begiining stock " Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amount sold " Type="float" />
+          <Property Name="AMOUNT" Type="float" />
+          <Property Name="Balance before order " Type="float" />
+          <Property Name="No of time to purchase " Type="float" />
+          <Property Name="Amount purchase " Type="float" />
+          <Property Name="Ending stock (litre)" Type="float" />
+          <Property Name="Amount1" Type="float" />
+        </EntityType>
+        <EntityType Name="STOCK$">
+          <Key>
+            <PropertyRef Name="Beginning stock" />
+          </Key>
+          <Property Name="SAFETY STOCK" Type="float" Nullable="false" />
+          <Property Name="Beginning stock" Type="float" Nullable="false" />
+          <Property Name="DATE" Type="datetime" />
+          <Property Name="PO_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="PARTOL_TYPE" Type="nvarchar" MaxLength="255" />
+          <Property Name="Amount sold (litre)" Type="float" />
+          <Property Name="AMOUNT(baht)" Type="float" />
+          <Property Name="BALANCE BEFORE ORDER" Type="float" />
+          <Property Name="No of time to purchase " Type="float" />
+          <Property Name="AMOUNT PURCHASE (LITRE)" Type="float" />
+          <Property Name="Amount purchase (baht)" Type="float" />
+          <Property Name="Ending stock (litre)" Type="float" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Truck$">
+          <Key>
+            <PropertyRef Name="TruckID" />
+          </Key>
+          <Property Name="TruckID" Type="float" Nullable="false" />
+          <Property Name="DriverID" Type="float" />
+          <Property Name="VEHICLE_NUMBER" Type="nvarchar" MaxLength="255" />
+          <Property Name="DriverName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="User$">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="float" Nullable="false" />
+          <Property Name="UserName By Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="NameUser" Type="nvarchar" MaxLength="255" />
+          <Property Name="Position" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="phoneNumber" Type="nvarchar" MaxLength="255" />
+          <Property Name="Age" Type="float" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="Capstone2ModelStoreContainer">
+          <EntitySet Name="'Account payable$'" EntityType="Self.'Account payable$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Account receiveable" EntityType="Self.Account receiveable" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'Cash $'" EntityType="Self.'Cash $'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Company$" EntityType="Self.Company$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'daily $'" EntityType="Self.'daily $'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="daily$" EntityType="Self.daily$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Driver$" EntityType="Self.Driver$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Manager$" EntityType="Self.Manager$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="monthly$" EntityType="Self.monthly$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order$" EntityType="Self.Order$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Purchase order" EntityType="Self.Purchase order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reconciliation " EntityType="Self.Reconciliation " Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'Sale Office$'" EntityType="Self.'Sale Office$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'stock $'" EntityType="Self.'stock $'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="'stock disel$'" EntityType="Self.'stock disel$'" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="STOCK$" EntityType="Self.STOCK$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Truck$" EntityType="Self.Truck$" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User$" EntityType="Self.User$" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Capstone2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_Account_payable__">
+          <Key>
+            <PropertyRef Name="Begiining_stock_" />
+          </Key>
+          <Property Name="SAFETY_STOCK" Type="Double" Nullable="false" />
+          <Property Name="Begiining_stock_" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_sold_" Type="Double" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="Balance_before_order_" Type="Double" />
+          <Property Name="No_of_time_to_purchase_" Type="Double" />
+          <Property Name="Amount_purchase_" Type="Double" />
+          <Property Name="Balance__litre_" Type="Double" />
+          <Property Name="Amount1" Type="Double" />
+        </EntityType>
+        <EntityType Name="Account_receiveable">
+          <Key>
+            <PropertyRef Name="Balance" />
+          </Key>
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ref" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Debit" Type="Double" />
+          <Property Name="Credit" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Balance" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="C_Cash___">
+          <Key>
+            <PropertyRef Name="Balance_" />
+          </Key>
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Ref" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Debit" Type="Double" />
+          <Property Name="Credit_" Type="Double" />
+          <Property Name="Balance_" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Company_">
+          <Key>
+            <PropertyRef Name="CompanyID" />
+          </Key>
+          <Property Name="CompanyID" Type="Double" Nullable="false" />
+          <Property Name="UserID" Type="Double" />
+          <Property Name="Companyname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="shipping_Address" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_daily___">
+          <Key>
+            <PropertyRef Name="total_COGS" />
+          </Key>
+          <Property Name="Date_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sale_of__Gasol95" Type="Double" Nullable="false" />
+          <Property Name="Sale_of_disel_" Type="Double" />
+          <Property Name="total_sale_" Type="Double" />
+          <Property Name="gasol_95_of_good_sold_" Type="Double" Nullable="false" />
+          <Property Name="disel_cost__of_good_sold" Type="Double" />
+          <Property Name="total_COGS" Type="Double" Nullable="false" />
+          <Property Name="gross_profit_" Type="Double" />
+          <Property Name="sale_offcie_staff_salary" Type="Double" />
+          <Property Name="gate_controller_salary" Type="Double" />
+          <Property Name="utility_expense_" Type="Double" />
+          <Property Name="depresisation_" Type="Double" />
+          <Property Name="net_income" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="daily_">
+          <Key>
+            <PropertyRef Name="Beginning_Stock_litre_" />
+          </Key>
+          <Property Name="Beginning_Stock_litre_" Type="Double" Nullable="false" />
+          <Property Name="F2" Type="Double" />
+          <Property Name="Amount_Perchased_litre_" Type="Double" />
+          <Property Name="F4" Type="Double" />
+          <Property Name="Amount_Sold__Day_litre_" Type="Double" Nullable="false" />
+          <Property Name="F6" Type="Double" />
+          <Property Name="Ending__Stock_litre_" Type="Double" />
+          <Property Name="F8" Type="Double" />
+        </EntityType>
+        <EntityType Name="Driver_">
+          <Key>
+            <PropertyRef Name="DriverID" />
+          </Key>
+          <Property Name="DriverID" Type="Double" Nullable="false" />
+          <Property Name="UserID" Type="Double" />
+          <Property Name="DriverName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TruckID" Type="Double" />
+          <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F10" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Invoice">
+          <Key>
+            <PropertyRef Name="InvoiceNumber" />
+          </Key>
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaymentNO" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="O_ty" Type="Double" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="Price_Liter" Type="Double" />
+          <Property Name="shipping_Address" Type="Double" />
+          <Property Name="CustomerID" Type="Double" />
+          <Property Name="Customername" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TaxNumber" Type="Double" />
+          <Property Name="InvoiceNumber" Type="Double" Nullable="false" />
+          <Property Name="Filling_Time" Type="Double" />
+          <Property Name="Vat_7___inclusive_" Type="Double" />
+          <Property Name="Grand_Total" Type="Double" />
+          <Property Name="Company_Name_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Address_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Manager_">
+          <Key>
+            <PropertyRef Name="ManagerID" />
+          </Key>
+          <Property Name="ManagerID" Type="Double" Nullable="false" />
+          <Property Name="UserID" Type="Double" />
+          <Property Name="ManagerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="monthly_">
+          <Key>
+            <PropertyRef Name="SALE" />
+          </Key>
+          <Property Name="SALE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="F2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F3" Type="Double" />
+        </EntityType>
+        <EntityType Name="Order_">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PaymentNO" Type="Double" />
+          <Property Name="OrderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="Price" Type="Double" />
+          <Property Name="Amount" Type="Double" />
+          <Property Name="shipping_Address" Type="Double" />
+          <Property Name="ShippingID" Type="Double" />
+          <Property Name="PONumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="OrderID" Type="Double" />
+          <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Purchase_order">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PaymentNO" Type="Double" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="O_ty" Type="Double" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="Price_Liter" Type="Double" />
+          <Property Name="shipping_Address" Type="Double" />
+          <Property Name="CompanyID" Type="Double" />
+          <Property Name="Companyname" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TaxNumber" Type="Double" />
+          <Property Name="F12" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F13" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="F14" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Reconciliation_">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="DATE" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PAYMENT_NUMBER" Type="Double" />
+          <Property Name="INVOICE_NUMBER" Type="Double" />
+          <Property Name="SHIPMENT_NUMBER" Type="Double" />
+          <Property Name="TRUCK_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="O_ty__Liter_" Type="Double" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="AGENT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="C_Sale_Office__">
+          <Key>
+            <PropertyRef Name="PONumber" />
+          </Key>
+          <Property Name="PONumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TIME_IN" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TIME_OUT" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TOTAL_TIME" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="OrderName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="VehicleNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OrderID" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_stock___">
+          <Key>
+            <PropertyRef Name="Beginning_Stock_Baht_" />
+          </Key>
+          <Property Name="safety" Type="Double" Nullable="false" />
+          <Property Name="F2" Type="Double" />
+          <Property Name="Beginning_Stock_litre_" Type="Double" Nullable="false" />
+          <Property Name="F4" Type="Double" />
+          <Property Name="Beginning_Stock_Baht_" Type="Double" Nullable="false" />
+          <Property Name="F6" Type="Double" />
+          <Property Name="Amount_Sold__Day_litre_" Type="Double" />
+          <Property Name="F8" Type="Double" />
+          <Property Name="Amount_Sold__Day_Baht_" Type="Double" />
+          <Property Name="F10" Type="Double" />
+          <Property Name="Balance_before_order" Type="Double" />
+          <Property Name="F12" Type="Double" />
+          <Property Name="No__of_time_to_purchase" Type="Double" />
+          <Property Name="F14" Type="Double" />
+          <Property Name="Amount_Perchased_litre_" Type="Double" />
+          <Property Name="F16" Type="Double" />
+          <Property Name="Amount_Perchased_baht_" Type="Double" />
+          <Property Name="F18" Type="Double" />
+          <Property Name="Balance_litre_" Type="Double" Nullable="false" />
+          <Property Name="F20" Type="Double" />
+          <Property Name="Balance_Baht_" Type="Double" Nullable="false" />
+          <Property Name="F22" Type="Double" />
+          <Property Name="F23" Type="Double" />
+          <Property Name="F24" Type="Double" />
+          <Property Name="F25" Type="Double" />
+          <Property Name="F26" Type="Double" />
+        </EntityType>
+        <EntityType Name="C_stock_disel__">
+          <Key>
+            <PropertyRef Name="PO_NUMBER" />
+          </Key>
+          <Property Name="SAFETY_STOCK" Type="Double" Nullable="false" />
+          <Property Name="Begiining_stock_" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_sold_" Type="Double" />
+          <Property Name="AMOUNT" Type="Double" />
+          <Property Name="Balance_before_order_" Type="Double" />
+          <Property Name="No_of_time_to_purchase_" Type="Double" />
+          <Property Name="Amount_purchase_" Type="Double" />
+          <Property Name="Ending_stock__litre_" Type="Double" />
+          <Property Name="Amount1" Type="Double" />
+        </EntityType>
+        <EntityType Name="STOCK_">
+          <Key>
+            <PropertyRef Name="Beginning_stock" />
+          </Key>
+          <Property Name="SAFETY_STOCK" Type="Double" Nullable="false" />
+          <Property Name="Beginning_stock" Type="Double" Nullable="false" />
+          <Property Name="DATE" Type="DateTime" Precision="3" />
+          <Property Name="PO_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PARTOL_TYPE" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Amount_sold__litre_" Type="Double" />
+          <Property Name="AMOUNT_baht_" Type="Double" />
+          <Property Name="BALANCE_BEFORE_ORDER" Type="Double" />
+          <Property Name="No_of_time_to_purchase_" Type="Double" />
+          <Property Name="AMOUNT_PURCHASE__LITRE_" Type="Double" />
+          <Property Name="Amount_purchase__baht_" Type="Double" />
+          <Property Name="Ending_stock__litre_" Type="Double" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Truck_">
+          <Key>
+            <PropertyRef Name="TruckID" />
+          </Key>
+          <Property Name="TruckID" Type="Double" Nullable="false" />
+          <Property Name="DriverID" Type="Double" />
+          <Property Name="VEHICLE_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DriverName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User_">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Double" Nullable="false" />
+          <Property Name="UserName_By_Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NameUser" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Position" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="phoneNumber" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Age" Type="Double" />
+          <Property Name="Gender" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Capstone2Entities17" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_Account_payable__" EntityType="Self.C_Account_payable__" />
+          <EntitySet Name="Account_receiveables" EntityType="Self.Account_receiveable" />
+          <EntitySet Name="C_Cash___" EntityType="Self.C_Cash___" />
+          <EntitySet Name="Company_" EntityType="Self.Company_" />
+          <EntitySet Name="C_daily___" EntityType="Self.C_daily___" />
+          <EntitySet Name="daily_" EntityType="Self.daily_" />
+          <EntitySet Name="Driver_" EntityType="Self.Driver_" />
+          <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+          <EntitySet Name="Manager_" EntityType="Self.Manager_" />
+          <EntitySet Name="monthly_" EntityType="Self.monthly_" />
+          <EntitySet Name="Order_" EntityType="Self.Order_" />
+          <EntitySet Name="Purchase_orders" EntityType="Self.Purchase_order" />
+          <EntitySet Name="Reconciliation_" EntityType="Self.Reconciliation_" />
+          <EntitySet Name="C_Sale_Office__" EntityType="Self.C_Sale_Office__" />
+          <EntitySet Name="C_stock___" EntityType="Self.C_stock___" />
+          <EntitySet Name="C_stock_disel__" EntityType="Self.C_stock_disel__" />
+          <EntitySet Name="STOCK_" EntityType="Self.STOCK_" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Truck_" EntityType="Self.Truck_" />
+          <EntitySet Name="User_" EntityType="Self.User_" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Capstone2ModelStoreContainer" CdmEntityContainer="Capstone2Entities17">
+          <EntitySetMapping Name="C_Account_payable__">
+            <EntityTypeMapping TypeName="Capstone2Model.C_Account_payable__">
+              <MappingFragment StoreEntitySet="'Account payable$'">
+                <ScalarProperty Name="SAFETY_STOCK" ColumnName="SAFETY STOCK" />
+                <ScalarProperty Name="Begiining_stock_" ColumnName="Begiining stock " />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="Amount_sold_" ColumnName="Amount sold " />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="Balance_before_order_" ColumnName="Balance before order " />
+                <ScalarProperty Name="No_of_time_to_purchase_" ColumnName="No of time to purchase " />
+                <ScalarProperty Name="Amount_purchase_" ColumnName="Amount purchase " />
+                <ScalarProperty Name="Balance__litre_" ColumnName="Balance (litre)" />
+                <ScalarProperty Name="Amount1" ColumnName="Amount1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Account_receiveables">
+            <EntityTypeMapping TypeName="Capstone2Model.Account_receiveable">
+              <MappingFragment StoreEntitySet="Account receiveable">
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit" ColumnName="Credit" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Cash___">
+            <EntityTypeMapping TypeName="Capstone2Model.C_Cash___">
+              <MappingFragment StoreEntitySet="'Cash $'">
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Ref" ColumnName="Ref" />
+                <ScalarProperty Name="Debit" ColumnName="Debit" />
+                <ScalarProperty Name="Credit_" ColumnName="Credit " />
+                <ScalarProperty Name="Balance_" ColumnName="Balance " />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Company_">
+            <EntityTypeMapping TypeName="Capstone2Model.Company_">
+              <MappingFragment StoreEntitySet="Company$">
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+                <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_daily___">
+            <EntityTypeMapping TypeName="Capstone2Model.C_daily___">
+              <MappingFragment StoreEntitySet="'daily $'">
+                <ScalarProperty Name="Date_" ColumnName="Date " />
+                <ScalarProperty Name="Sale_of__Gasol95" ColumnName="Sale of  Gasol95" />
+                <ScalarProperty Name="Sale_of_disel_" ColumnName="Sale of disel " />
+                <ScalarProperty Name="total_sale_" ColumnName="total sale " />
+                <ScalarProperty Name="gasol_95_of_good_sold_" ColumnName="gasol 95 of good sold " />
+                <ScalarProperty Name="disel_cost__of_good_sold" ColumnName="disel cost  of good sold" />
+                <ScalarProperty Name="total_COGS" ColumnName="total COGS" />
+                <ScalarProperty Name="gross_profit_" ColumnName="gross profit " />
+                <ScalarProperty Name="sale_offcie_staff_salary" ColumnName="sale offcie staff salary" />
+                <ScalarProperty Name="gate_controller_salary" ColumnName="gate controller salary" />
+                <ScalarProperty Name="utility_expense_" ColumnName="utility expense " />
+                <ScalarProperty Name="depresisation_" ColumnName="depresisation " />
+                <ScalarProperty Name="net_income" ColumnName="net income" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="daily_">
+            <EntityTypeMapping TypeName="Capstone2Model.daily_">
+              <MappingFragment StoreEntitySet="daily$">
+                <ScalarProperty Name="Beginning_Stock_litre_" ColumnName="Beginning Stock(litre)" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="Amount_Perchased_litre_" ColumnName="Amount Perchased(litre)" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="Amount_Sold__Day_litre_" ColumnName="Amount Sold/ Day(litre)" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="Ending__Stock_litre_" ColumnName="Ending  Stock(litre)" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Driver_">
+            <EntityTypeMapping TypeName="Capstone2Model.Driver_">
+              <MappingFragment StoreEntitySet="Driver$">
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+                <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+                <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="F7" ColumnName="F7" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="F9" ColumnName="F9" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Invoices">
+            <EntityTypeMapping TypeName="Capstone2Model.Invoice">
+              <MappingFragment StoreEntitySet="Invoice">
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PaymentNO" ColumnName="PaymentNO" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="O_ty" ColumnName="O'ty" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="Price_Liter" ColumnName="Price/Liter" />
+                <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="Customername" ColumnName="Customername" />
+                <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+                <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+                <ScalarProperty Name="Filling_Time" ColumnName="Filling Time" />
+                <ScalarProperty Name="Vat_7___inclusive_" ColumnName="Vat 7% (inclusive)" />
+                <ScalarProperty Name="Grand_Total" ColumnName="Grand Total" />
+                <ScalarProperty Name="Company_Name_" ColumnName="Company Name " />
+                <ScalarProperty Name="Address_" ColumnName="Address " />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Manager_">
+            <EntityTypeMapping TypeName="Capstone2Model.Manager_">
+              <MappingFragment StoreEntitySet="Manager$">
+                <ScalarProperty Name="ManagerID" ColumnName="ManagerID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ManagerName" ColumnName="ManagerName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="monthly_">
+            <EntityTypeMapping TypeName="Capstone2Model.monthly_">
+              <MappingFragment StoreEntitySet="monthly$">
+                <ScalarProperty Name="SALE" ColumnName="SALE" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="F3" ColumnName="F3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order_">
+            <EntityTypeMapping TypeName="Capstone2Model.Order_">
+              <MappingFragment StoreEntitySet="Order$">
+                <ScalarProperty Name="PaymentNO" ColumnName="PaymentNO" />
+                <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+                <ScalarProperty Name="ShippingID" ColumnName="ShippingID" />
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Purchase_orders">
+            <EntityTypeMapping TypeName="Capstone2Model.Purchase_order">
+              <MappingFragment StoreEntitySet="Purchase order">
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PaymentNO" ColumnName="PaymentNO" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="O_ty" ColumnName="O'ty" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="Price_Liter" ColumnName="Price/Liter" />
+                <ScalarProperty Name="shipping_Address" ColumnName="shipping Address" />
+                <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+                <ScalarProperty Name="Companyname" ColumnName="Companyname" />
+                <ScalarProperty Name="TaxNumber" ColumnName="TaxNumber" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="F13" ColumnName="F13" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reconciliation_">
+            <EntityTypeMapping TypeName="Capstone2Model.Reconciliation_">
+              <MappingFragment StoreEntitySet="Reconciliation ">
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PAYMENT_NUMBER" ColumnName="PAYMENT_NUMBER" />
+                <ScalarProperty Name="INVOICE_NUMBER" ColumnName="INVOICE_NUMBER" />
+                <ScalarProperty Name="SHIPMENT_NUMBER" ColumnName="SHIPMENT_NUMBER" />
+                <ScalarProperty Name="TRUCK_NUMBER" ColumnName="TRUCK_NUMBER" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="O_ty__Liter_" ColumnName="O'ty (Liter)" />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="AGENT" ColumnName="AGENT" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_Sale_Office__">
+            <EntityTypeMapping TypeName="Capstone2Model.C_Sale_Office__">
+              <MappingFragment StoreEntitySet="'Sale Office$'">
+                <ScalarProperty Name="PONumber" ColumnName="PONumber" />
+                <ScalarProperty Name="TIME_IN" ColumnName="TIME_IN" />
+                <ScalarProperty Name="TIME_OUT" ColumnName="TIME_OUT" />
+                <ScalarProperty Name="TOTAL_TIME" ColumnName="TOTAL_TIME" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="OrderName" ColumnName="OrderName" />
+                <ScalarProperty Name="VehicleNo" ColumnName="VehicleNo" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_stock___">
+            <EntityTypeMapping TypeName="Capstone2Model.C_stock___">
+              <MappingFragment StoreEntitySet="'stock $'">
+                <ScalarProperty Name="safety" ColumnName="safety" />
+                <ScalarProperty Name="F2" ColumnName="F2" />
+                <ScalarProperty Name="Beginning_Stock_litre_" ColumnName="Beginning Stock(litre)" />
+                <ScalarProperty Name="F4" ColumnName="F4" />
+                <ScalarProperty Name="Beginning_Stock_Baht_" ColumnName="Beginning Stock(Baht)" />
+                <ScalarProperty Name="F6" ColumnName="F6" />
+                <ScalarProperty Name="Amount_Sold__Day_litre_" ColumnName="Amount Sold/ Day(litre)" />
+                <ScalarProperty Name="F8" ColumnName="F8" />
+                <ScalarProperty Name="Amount_Sold__Day_Baht_" ColumnName="Amount Sold/ Day(Baht)" />
+                <ScalarProperty Name="F10" ColumnName="F10" />
+                <ScalarProperty Name="Balance_before_order" ColumnName="Balance before order" />
+                <ScalarProperty Name="F12" ColumnName="F12" />
+                <ScalarProperty Name="No__of_time_to_purchase" ColumnName="No# of time to purchase" />
+                <ScalarProperty Name="F14" ColumnName="F14" />
+                <ScalarProperty Name="Amount_Perchased_litre_" ColumnName="Amount Perchased(litre)" />
+                <ScalarProperty Name="F16" ColumnName="F16" />
+                <ScalarProperty Name="Amount_Perchased_baht_" ColumnName="Amount Perchased(baht)" />
+                <ScalarProperty Name="F18" ColumnName="F18" />
+                <ScalarProperty Name="Balance_litre_" ColumnName="Balance(litre)" />
+                <ScalarProperty Name="F20" ColumnName="F20" />
+                <ScalarProperty Name="Balance_Baht_" ColumnName="Balance(Baht)" />
+                <ScalarProperty Name="F22" ColumnName="F22" />
+                <ScalarProperty Name="F23" ColumnName="F23" />
+                <ScalarProperty Name="F24" ColumnName="F24" />
+                <ScalarProperty Name="F25" ColumnName="F25" />
+                <ScalarProperty Name="F26" ColumnName="F26" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_stock_disel__">
+            <EntityTypeMapping TypeName="Capstone2Model.C_stock_disel__">
+              <MappingFragment StoreEntitySet="'stock disel$'">
+                <ScalarProperty Name="SAFETY_STOCK" ColumnName="SAFETY STOCK" />
+                <ScalarProperty Name="Begiining_stock_" ColumnName="Begiining stock " />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="Amount_sold_" ColumnName="Amount sold " />
+                <ScalarProperty Name="AMOUNT" ColumnName="AMOUNT" />
+                <ScalarProperty Name="Balance_before_order_" ColumnName="Balance before order " />
+                <ScalarProperty Name="No_of_time_to_purchase_" ColumnName="No of time to purchase " />
+                <ScalarProperty Name="Amount_purchase_" ColumnName="Amount purchase " />
+                <ScalarProperty Name="Ending_stock__litre_" ColumnName="Ending stock (litre)" />
+                <ScalarProperty Name="Amount1" ColumnName="Amount1" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="STOCK_">
+            <EntityTypeMapping TypeName="Capstone2Model.STOCK_">
+              <MappingFragment StoreEntitySet="STOCK$">
+                <ScalarProperty Name="SAFETY_STOCK" ColumnName="SAFETY STOCK" />
+                <ScalarProperty Name="Beginning_stock" ColumnName="Beginning stock" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="PO_NUMBER" ColumnName="PO_NUMBER" />
+                <ScalarProperty Name="PARTOL_TYPE" ColumnName="PARTOL_TYPE" />
+                <ScalarProperty Name="Amount_sold__litre_" ColumnName="Amount sold (litre)" />
+                <ScalarProperty Name="AMOUNT_baht_" ColumnName="AMOUNT(baht)" />
+                <ScalarProperty Name="BALANCE_BEFORE_ORDER" ColumnName="BALANCE BEFORE ORDER" />
+                <ScalarProperty Name="No_of_time_to_purchase_" ColumnName="No of time to purchase " />
+                <ScalarProperty Name="AMOUNT_PURCHASE__LITRE_" ColumnName="AMOUNT PURCHASE (LITRE)" />
+                <ScalarProperty Name="Amount_purchase__baht_" ColumnName="Amount purchase (baht)" />
+                <ScalarProperty Name="Ending_stock__litre_" ColumnName="Ending stock (litre)" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Capstone2Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Truck_">
+            <EntityTypeMapping TypeName="Capstone2Model.Truck_">
+              <MappingFragment StoreEntitySet="Truck$">
+                <ScalarProperty Name="TruckID" ColumnName="TruckID" />
+                <ScalarProperty Name="DriverID" ColumnName="DriverID" />
+                <ScalarProperty Name="VEHICLE_NUMBER" ColumnName="VEHICLE_NUMBER" />
+                <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_">
+            <EntityTypeMapping TypeName="Capstone2Model.User_">
+              <MappingFragment StoreEntitySet="User$">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserName_By_Email" ColumnName="UserName By Email" />
+                <ScalarProperty Name="NameUser" ColumnName="NameUser" />
+                <ScalarProperty Name="Position" ColumnName="Position" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+                <ScalarProperty Name="Age" ColumnName="Age" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
